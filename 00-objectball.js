@@ -162,7 +162,7 @@ function shoesSize(playerName) {
   }
 }
 
-console.log(shoesSize("Brendan Haywood"), numPointsScored("Brendan Haywood"));
+// console.log(shoesSize("Brendan Haywood"), numPointsScored("Brendan Haywood"));
 
 function teamColor(teamNombre) {
   const dataGame = gameObject();
@@ -174,7 +174,7 @@ function teamColor(teamNombre) {
   }
 }
 
-teamColor("home");
+// teamColor("home");
 
 function teamName() {
   let dataName = gameObject();
@@ -186,4 +186,18 @@ function teamName() {
   return console.log(nameArray);
 }
 
-teamName();
+// teamName();
+// This function get everything from my currenct object players names
+function playerNumbers(name) {
+  let dataNumber = gameObject();
+
+  for (let key in dataNumber) {
+    const player = dataNumber[key];
+    for (let i in player.players) {
+      if (i === name) {
+        return player.players[i].blocks;
+      }
+    }
+  }
+}
+console.log(playerNumbers("Brendan Haywood"));
